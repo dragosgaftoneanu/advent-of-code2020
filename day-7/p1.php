@@ -611,7 +611,7 @@ $bags = array();
 
 lookFor("shiny gold", $rulesarray);
 
-echo "Bags: " . count(array_unique($bags));
+echo "Bags: " . count(array_unique($bags)) . "\n";
 
 function lookFor($for, $array)
 {

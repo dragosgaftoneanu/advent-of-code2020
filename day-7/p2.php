@@ -610,7 +610,7 @@ $bags = 0;
 
 lookFor("shiny gold", $rulesarray);
 
-echo "Bags: " . $bags;
+echo "Bags: " . $bags . "\n";
 
 function lookFor($for, $array)
 {
