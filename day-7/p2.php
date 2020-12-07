@@ -604,9 +604,7 @@ foreach($rules as $rule)
 	preg_match('/([a-z ]+) bags contain (.*)/', $rule, $matches);
 	preg_match_all('/([0-9]+ [a-z ]+) bags?/', $matches[2], $matches1);
 	foreach($matches1[1] as $m)
-	{
 		$rulesarray[$matches[1]][] = $m;
-	}
 }
 
 $bags = 0;

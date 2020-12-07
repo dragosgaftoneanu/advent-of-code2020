@@ -619,11 +619,9 @@ function lookFor($for, $array)
 	global $bags;
 	
 	foreach($array as $key => $value)
-	{
         if (in_array($for, $value))
 		{
 			$bags[] = $key;
 			lookFor($key, $array, $bags);
         }
-	}
 }
