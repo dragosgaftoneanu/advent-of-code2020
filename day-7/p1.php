@@ -600,12 +600,11 @@ START;
 $rules = explode("\n", $input);
 $rulesarray = array();
 
-foreach($rules as $rule)
-{
-	preg_match('/([a-z ]+) bags contain (.*)/', $rule, $matches);
-	preg_match_all('/[0-9]+ ([a-z ]+) bags?/', $matches[2], $matches1);
-	foreach($matches1[1] as $m)
-		$rulesarray[$matches[1]][] = $m;
+foreach ($rules as $rule) {
+    preg_match('/([a-z ]+) bags contain (.*)/', $rule, $matches);
+    preg_match_all('/[0-9]+ ([a-z ]+) bags?/', $matches[2], $matches1);
+    foreach ($matches1[1] as $m)
+        $rulesarray[$matches[1]][] = $m;
 }
 
 $bags = array();
@@ -616,12 +615,11 @@ echo "Bags: " . count(array_unique($bags));
 
 function lookFor($for, $array)
 {
-	global $bags;
-	
-	foreach($array as $key => $value)
-        if (in_array($for, $value))
-		{
-			$bags[] = $key;
-			lookFor($key, $array, $bags);
+    global $bags;
+
+    foreach ($array as $key => $value)
+        if (in_array($for, $value)) {
+            $bags[] = $key;
+            lookFor($key, $array);
         }
 }
