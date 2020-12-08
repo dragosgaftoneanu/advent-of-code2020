@@ -643,10 +643,10 @@ for($j=0;$j<count($instructions);$j++)
 		$values = explode(" ", $newinstructions[$i]);
 		switch($values[0])
 		{
-			case 'jmp': $i+= (int) $values[1]-1; break;
-			case 'acc': $accumulator+= (int) $values[1]; break;
+			case 'jmp': $i+= (int) $values[1]; break;
+			case 'acc': $accumulator+= (int) $values[1]; $i++; break;
+			default: $i++;
 		}
-		$i++;
 	}
 	
 	if($i == count($instructions))
