@@ -1022,7 +1022,7 @@ for($i=0;$i<count($numbers);$i++)
 {
 	$sum = (int) $numbers[$i];
 	$array = array((int) $numbers[$i]);
-	for($j=$i+1;$j<count($numbers);$j++)
+	for($j=$i;$j<count($numbers);$j++)
 	{
 		$sum+=(int) $numbers[$j];
 		$array[] = (int) $numbers[$j];
