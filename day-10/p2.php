@@ -118,7 +118,7 @@ $jolts[] = 0;
 sort($jolts);
 $arr = array(1);
 
-for($i=1;$i<count($jolts);$i++)
+for($i=0;$i<count($jolts);$i++)
 	for($j=0;$j<$i;$j++)
 		if($jolts[$i] - $jolts[$j] <= 3)
 			@$arr[$i] += @$arr[$j];
